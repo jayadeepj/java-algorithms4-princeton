@@ -1,0 +1,2 @@
+# java-algorithms4-princeton
+This repository contains some the code I developed while I took the Algorithms &amp; data structures course by Prof. Robert Sedgewick from princeton through corsera. It includes some my solutions to the exercises, creative problems &amp; web exercises presented in the text book. Algorithms (4th Edition) by Robert Sedgewick (Author), Kevin Wayne (Author). However, it does not include any assignments for obvious reasons!!
