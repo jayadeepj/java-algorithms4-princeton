@@ -9,7 +9,7 @@
  2. if the user enters a "-" , the Queue should be DeQueued.
  3. if the user enters a "!" , the Queue size should be returned.
 
-## Problem Description -
+## Problem Description 
 
 ## Solution
 
@@ -35,11 +35,11 @@ Enqueing Value ==> 6
 
 Current Queue Size ==> 3
 
--
+'-'
 
 DeQueued Value ==> 8
 
--
+'-'
 
 DeQueued Value ==> 3
 
@@ -47,11 +47,11 @@ DeQueued Value ==> 3
 
 Current Queue Size ==> 1
 
--
+'-'
 
 DeQueued Value ==> 6
 
--
+'-'
 
 Exception in thread "main" java.lang.RuntimeException: Currently No Elements in GenericResizingQueue to POP 
 
