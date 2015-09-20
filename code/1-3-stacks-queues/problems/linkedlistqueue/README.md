@@ -13,7 +13,9 @@
 ##Solution
 
 
-##Dependencies : The stdlib.jar @ http://introcs.cs.princeton.edu/java/stdlib/ is used as dependency
+##Dependencies 
+
+ The stdlib.jar @ http://introcs.cs.princeton.edu/java/stdlib/ is used as dependency
 
 ## Output
 
