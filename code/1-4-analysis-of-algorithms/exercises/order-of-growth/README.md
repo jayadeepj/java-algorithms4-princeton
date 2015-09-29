@@ -4,6 +4,7 @@
  Give the order of growth (as a function of N) of the running times of each of the following code fragments:
 
 Problem 1)
+
 int sum = 0;
 for (int n = N; n > 0; n /= 2)
    for (int i = 0; i < n; i++) 
