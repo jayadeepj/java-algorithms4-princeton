@@ -20,25 +20,45 @@
 ## Output
 
 S
+
 Enqueing Value ==> S
+
 W
+
 Enqueing Value ==> W
+
 A
+
 Enqueing Value ==> A
+
 X
+
 Enqueing Value ==> X
+
 @
+
 Dequeued Value ==> X
+
 @
+
 Dequeued Value ==> W
+
 !
+
 Current Queue Size ==> 2
+
 G
+
 Enqueing Value ==> G
+
 K
+
 Enqueing Value ==> K
+
 E
+
 Enqueing Value ==> E
+
 *
 
 Dequeing All Values ==> S  K  G  E  A
