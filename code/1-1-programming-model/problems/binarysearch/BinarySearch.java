@@ -32,26 +32,19 @@ public class BinarySearch {
 
 	public static int binarySearch(int key, int[] whilteList)
 	{
-		int min = 0;
-		int max = whilteList.length -1;
+		int first = 0;
+		int last = whilteList.length -1;
+		int mid;
 		
-		if(whilteList[0]==key)
-			return 0;
-		
-		if(whilteList[whilteList.length -1]==key)
-			return whilteList.length -1;
-		
-		int mid = (min + max)/2;
-		while(min<mid && max>mid){
+		while(last>= first){
 			
+			mid = (first+last)/2;
 			if(whilteList[mid]==key)
 				return mid;
 			else if(whilteList[mid]<key)
-				min=mid;
+				first=mid+1;
 			else
-				max=mid;
-
-			mid = (min + max)/2;
+				last=mid-1;
 		}
 
 		return -1;

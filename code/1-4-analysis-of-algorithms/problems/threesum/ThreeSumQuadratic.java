@@ -52,30 +52,21 @@ public class ThreeSumQuadratic {
 
 	}
 
-	public static int binarySearch(int key, int[] inputArray)
+	public static int binarySearch(int key, int[] whilteList)
 	{
+		int first = 0;
+		int last = whilteList.length -1;
+		int mid;
 		
-		int min = 0;
-		int max = inputArray.length -1;
-		
-		if(inputArray[0]==key)
-			return 0;
-		
-		if(inputArray[inputArray.length -1]==key)
-			return inputArray.length -1;
-
-		int mid = (min + max)/2;
-		
-		while(min<mid && max>mid){
-
-			if(inputArray[mid]==key)
+		while(last>= first){
+			
+			mid = (first+last)/2;
+			if(whilteList[mid]==key)
 				return mid;
-			else if(inputArray[mid]<key)
-				min=mid;
+			else if(whilteList[mid]<key)
+				first=mid+1;
 			else
-				max=mid;
-
-			mid = (min + max)/2;
+				last=mid-1;
 		}
 
 		return -1;
