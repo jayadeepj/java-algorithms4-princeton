@@ -8,7 +8,8 @@ if the user enters a "@{KEY}" , the VALUE corresponding to the KEY should be ret
 if the user enters a "!" , the BST size should be returned.         
 if the user enters a "*" , the entire BST should be printed.        
   
-## Problem Description : A binary search tree (BST) is a binary tree where each node has a Comparable key (and an associated value) and satisfies the restriction that the key in any node is larger than the keys in all nodes in that node's left subtree and smaller than the keys in all nodes in that node's right subtree.     
+## Problem Description 
+ A binary search tree (BST) is a binary tree where each node has a Comparable key (and an associated value) and satisfies the restriction that the key in any node is larger than the keys in all nodes in that node's left subtree and smaller than the keys in all nodes in that node's right subtree.     
 
 A 2-3 search tree is a tree that either is empty or:      
 A 2node, with one key (and associated value) and two links, a left link to a 2-3 search tree with smaller keys, and a right link to a 2-3          
