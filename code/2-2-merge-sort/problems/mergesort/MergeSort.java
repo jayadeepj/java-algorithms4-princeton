@@ -1,3 +1,10 @@
+/**
+ * MergeSort is based on a simple operation known as merging: combining two
+ * ordered arrays to make one larger ordered array. This operation immediately
+ * lends itself to a simple recursive sort method known as mergesort: to sort an
+ * array, divide it into two halves, sort the two halves (recursively), and then
+ * merge the results.
+ */
 public class MergeSort {
 
 	public static void main(String[] args) {
@@ -26,7 +33,7 @@ public class MergeSort {
 	/**
 	 * To sort an array, divide it into two halves, sort the two halves
 	 * (recursively), and then merge the results.
-	 * 
+	 *
 	 * @param lo
 	 * @param hi
 	 * @param items
@@ -42,7 +49,7 @@ public class MergeSort {
 
 	/**
 	 * Merge the sorted halves by using an auxiliary array
-	 * 
+	 *
 	 * @param lo
 	 * @param mid
 	 * @param hi
@@ -73,7 +80,7 @@ public class MergeSort {
 	/**
 	 * Elements have to be individually copied. Clone/CopyOf methods will not
 	 * work as object references will be changed
-	 * 
+	 *
 	 * @param src
 	 * @param dst
 	 */
