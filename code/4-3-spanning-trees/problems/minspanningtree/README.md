@@ -38,7 +38,6 @@ Edge [u=6, v=2, edgeWeight=0.4]
 Edge [u=4, v=5, edgeWeight=0.35]      
 Edge [u=5, v=7, edgeWeight=0.28]     
 Edge [u=2, v=3, edgeWeight=0.17]        
-Edge [u=0, v=2, edgeWeight=0.26]
+Edge [u=0, v=2, edgeWeight=0.26]     
 Edge [u=1, v=7, edgeWeight=0.19]      
 Edge [u=0, v=7, edgeWeight=0.16]      
- 
