@@ -1,4 +1,4 @@
-## Shortest Path (Dijkstra's algorithm).
+## Shortest Path (Bellman-Ford algorithm).
 
 ## Problem
   
@@ -9,11 +9,11 @@
   
 ## Solution 
 
-  Dijkstra's algorithm initializing dist[s] to 0 and all other distTo[] entries to positive infinity. Then, it repeatedly relaxes and adds to the tree a non-tree vertex with the lowest distTo[] value, continuing until all vertices are on the tree or no non-tree vertex has a finite distTo[] value.
-
-## Complexity    
-
-  Dijkstra's algorithm solves the single-source shortest-paths problem in edge-weighted digraphs with nonnegative weights using extra space proportional to V and time proportional to E log V (in the worst case).
+  Bellman-Ford algorithm initializes distTo[s] to 0 and all other distTo[] values to infinity. Then, considering the digraph's edges in any order, and relax all edges. Make V such passes.
+ 
+## Complexity  
+ 
+  The time complexity is VE (V passes for E edges)
 
 	
 ##Dependencies 
