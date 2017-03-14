@@ -24,6 +24,10 @@ public class BitManipulationTricks2 {
 		clearRightMost1Bit(239);
 		System.out.println("\n----------------------------------------------------------------\n");
 		
+		System.out.println("Turn off the leftmost 1-bit");
+		clearLeftMost1Bit(239);
+		System.out.println("\n----------------------------------------------------------------\n");
+		
 		System.out.println("Isolate the rightmost 1-bit");
 		isolateRightMost1Bit(156);
 		System.out.println("\n----------------------------------------------------------------\n");
@@ -91,6 +95,18 @@ public class BitManipulationTricks2 {
 		System.out.println("After Clearing bit N >> " + Integer.toBinaryString(N & (N-1)));
 	}
 
+	/**
+	 * Turn off the leftmost 1-bit.
+	 * 
+	 * @param N
+	 */
+	public static void clearLeftMost1Bit(int N) {
+		System.out.println("Before Clearing bit N >> " + Integer.toBinaryString(N));
+		int bitLength =  Integer.toBinaryString(N).length();
+		int X = N & ~(1<< (bitLength -1));
+		System.out.println("After Clearing bit N >> " + Integer.toBinaryString(X));
+	}
+	
 	/**
 	 * Unset the i-th bit.
 	 * 
