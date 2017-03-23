@@ -24,8 +24,12 @@ public class BitManipulationTricks2 {
 		clearRightMost1Bit(239);
 		System.out.println("\n----------------------------------------------------------------\n");
 		
-		System.out.println("Turn off the leftmost 1-bit");
-		clearLeftMost1Bit(239);
+		System.out.println("Turn off the leftmost 1-bit Trick-1");
+		clearLeftMost1BitTrick1(239);
+		System.out.println("\n----------------------------------------------------------------\n");
+		
+		System.out.println("Turn off the leftmost 1-bit Trick-2");
+		clearLeftMost1BitTrick2(239);
 		System.out.println("\n----------------------------------------------------------------\n");
 		
 		System.out.println("Isolate the rightmost 1-bit");
@@ -100,13 +104,24 @@ public class BitManipulationTricks2 {
 	 * 
 	 * @param N
 	 */
-	public static void clearLeftMost1Bit(int N) {
+	public static void clearLeftMost1BitTrick1(int N) {
 		System.out.println("Before Clearing bit N >> " + Integer.toBinaryString(N));
 		int bitLength =  Integer.toBinaryString(N).length();
 		int X = N & ~(1<< (bitLength -1));
 		System.out.println("After Clearing bit N >> " + Integer.toBinaryString(X));
 	}
 	
+	/**
+	 * Turn off the leftmost 1-bit.
+	 * 
+	 * @param N
+	 */
+	public static void clearLeftMost1BitTrick2(int N) {
+		System.out.println("Before Clearing bit N >> " + Integer.toBinaryString(N));
+		int logNto2 = (int) (Math.log(N) / Math.log(2));
+		int X = N & ~(1<< (logNto2));
+		System.out.println("After Clearing bit N >> " + Integer.toBinaryString(X));
+	}
 	/**
 	 * Unset the i-th bit.
 	 * 

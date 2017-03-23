@@ -39,10 +39,15 @@ public class BitManipulationTricks1 {
 		generateAllPossibleSubset(masterSet);
 		System.out.println("\n----------------------------------------------------------------\n");
 
-		int N5 = (int) Math.pow(2.0, 28);
+		int N5 = (int) Math.pow(2.0, 5) + 10;
 		System.out.println(
-				"Find the largest power of 2 (most significant bit in binary form), which is less than or equal to the given number N.");
-		System.out.println("Largest power of 2 less than >> " + N5 + " is >> " + largestPower(N5));
+				"Trick 1: Find the largest power of 2 (most significant bit in binary form), which is less than or equal to the given number N.");
+		System.out.println("Largest power of 2 less than >> " + N5 + " is >> " + largestPowerTrick1(N5));
+		System.out.println("\n----------------------------------------------------------------\n");
+		
+		System.out.println(
+				"Trick 2: Find the largest power of 2 (most significant bit in binary form), which is less than or equal to the given number N.");
+		System.out.println("Largest power of 2 less than >> " + N5 + " is >> " + largestPowerTrick2(N5));
 		System.out.println("\n----------------------------------------------------------------\n");
 
 		System.out.println("Given two numbers A and B. Swap A and B without using arithmetic operator");
@@ -121,7 +126,7 @@ public class BitManipulationTricks1 {
 	 * @param N
 	 * @return
 	 */
-	public static int largestPower(int N) {
+	public static int largestPowerTrick1(int N) {
 		N = N | N >> 1;
 		N = N | N >> 2;
 		N = N | N >> 4;
@@ -130,6 +135,21 @@ public class BitManipulationTricks1 {
 		N = N | N >> 32;
 		return (N + 1) >> 1;
 
+	}
+
+	/**
+	 * Find the largest power of 2 (most significant bit in binary form), which
+	 * is less than or equal to the given number N.
+	 * 
+	 * However this trick will work only of the number starts with 1. (E.g 8D is
+	 * passed as 1000 and not 00001000)
+	 * 
+	 * @param N
+	 * @return
+	 */
+	public static int largestPowerTrick2(int N) {
+		int bitLength =  Integer.toBinaryString(N).length();
+		return (1 << (bitLength -1));
 	}
 
 	/**
