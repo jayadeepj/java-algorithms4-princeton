@@ -10,6 +10,7 @@ public class UsefulExpressions {
 		System.out.println("\n----------------------------------------------------------------\n");
 		ipV6Matcher();
 		System.out.println("\n----------------------------------------------------------------\n");
+		macAddressMatcher();
 		System.out.println("\n----------------------------------------------------------------\n");
 		System.out.println("\n----------------------------------------------------------------\n");
 		System.out.println("\n----------------------------------------------------------------\n");
@@ -94,13 +95,32 @@ public class UsefulExpressions {
 		
 	}
 	
+	/**
+	 * Ipv6 contain 128 bits => 8 pieces of 16 bits
+	 * @return
+	 */
 	public static boolean ipV6Matcher() {
+		System.out.println(" Ipv6 contain 128 bits => 8 pieces of 16 bits");
 		String ipv6Pattern = "([0-9a-fA-F]{0,4}\\:){7}([0-9a-fA-F]{0,4})";
-		String address = "2001:0db8:0000:0000:0000:ff00:0042:8329";
-		String address1= "2001:0db8:0:0:0:ff00:0042:8329";
-		System.out.println(" Regex ' " + ipv6Pattern + " ' on string  ' " + address + " ' >> " + address.matches(ipv6Pattern));
-		System.out.println(" Regex ' " + ipv6Pattern + " ' on string  ' " + address1 + " ' >> " + address1.matches(ipv6Pattern));
-		return address.matches(ipv6Pattern);
+		String validIpV6 = "2001:0db8:0000:0000:0000:ff00:0042:8329";
+		String inValidIpV6= "2001:0db8:0:0:0:ff00:0042:8329";
+		System.out.println(" Regex ' " + ipv6Pattern + " ' on string  ' " + validIpV6 + " ' >> " + validIpV6.matches(ipv6Pattern));
+		System.out.println(" Regex ' " + ipv6Pattern + " ' on string  ' " + inValidIpV6 + " ' >> " + inValidIpV6.matches(ipv6Pattern));
+		return validIpV6.matches(ipv6Pattern);
+	}
+	
+	/**
+	 * Mac address contains 6 octects (48 bits)
+	 * @return
+	 */
+	public static boolean macAddressMatcher() {
+		System.out.println(" Mac address contains 6 octects (48 bits)");
+		String macPattern = "([0-9a-fA-F]{0,2}\\:){5}([0-9a-fA-F]{0,4})";
+		String validMac = "52:54:00:90:8d:7a";
+		String invalidMac= "2001:0db8:0:0:0:ff00:0042:8329";
+		System.out.println(" Regex ' " + validMac + " ' on string  ' " + validMac + " ' >> " + validMac.matches(macPattern));
+		System.out.println(" Regex ' " + invalidMac + " ' on string  ' " + invalidMac + " ' >> " + invalidMac.matches(macPattern));
+		return validMac.matches(macPattern);
 	}
 	
 }
