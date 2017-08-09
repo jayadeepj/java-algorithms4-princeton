@@ -21,13 +21,13 @@ Focusing on the task of sorting, we abandon the notion of hiding the heap repres
 ## Output
 
 input array >>    
-null 56 26 45 78 98 23 11 54 49 27    
+ 56 26 45 78 98 23 11 54 49 27    
 
 heapified array >>  
-null 98 78 45 54 56 23 11 26 49 27     
+ 98 78 45 54 56 23 11 26 49 27     
 
 sorted array >>      
-null 11 23 26 27 45 49 54 56 78 98    
+ 11 23 26 27 45 49 54 56 78 98    
 
 ## References
 
