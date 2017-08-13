@@ -2,18 +2,18 @@ package recursion.simple;
 
 /**
  * Efficient mechanism to generate fibonacci numbers
- * Method 1 uses simple recursion, 
+ * Method 1 uses simple recursion,
  * but time taken to compute will exponentially increase over time
- * 
+ *
  * Method 2 uses memorization to avoid re-computations of the same N
- * 
+ *
  * Compare the time difference between the two
  *
  */
 public class FibonacciGenerator {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("Metthod 1");
 		System.out.println("*********************");
 		long startTime1 = System.currentTimeMillis();
@@ -24,19 +24,30 @@ public class FibonacciGenerator {
 		System.out.println("Time taken is >> " + (endTime1 - startTime1));
 
 		long startTime2 = System.currentTimeMillis();
-		
+
 		System.out.println("Metthod 2");
 		System.out.println("*********************");
-		
+
 		int[] mem = new int[48];
 		mem[0] = 0;
 		mem[1] = 1;
-		
+
 		for (int i = 1; i < 47; i++)
 			System.out.println(fibWithMemorization(i,mem));
 
 		long endTime2 = System.currentTimeMillis();
 		System.out.println("Time taken is >> " + (endTime2 - startTime2));
+
+
+		long startTime3 = System.currentTimeMillis();
+		System.out.println("\n Metthod 3");
+		System.out.println("*********************");
+
+		for (int i = 1; i < 47; i++)
+			System.out.println(muchSimpleFib(0, 1, 1,i));
+
+		long endTime3 = System.currentTimeMillis();
+		System.out.println("Time taken is >> " + (endTime3 - startTime3));
 	}
 
 	/**
@@ -63,4 +74,18 @@ public class FibonacciGenerator {
 		mem[N - 1] = fibWithMemorization((N - 1),mem);
 		return mem[N - 2]+ mem[N - 1] ;
 	}
+
+/**
+ * Uses a simple technique no need of memoization
+ *
+ * @param N
+ * @param mem
+ * @return
+ */
+public static long muchSimpleFib(long a, long b, long count, long maxCount) {
+	if (count == maxCount)
+		return b;
+
+	return muchSimpleFib(b,  a + b, count + 1, maxCount);
+}
 }
