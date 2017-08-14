@@ -1,17 +1,18 @@
 # Power Sum
 
 
-## Problem 
+## Problem
 
 
 
-## Problem Description 
+
+## Problem Description
 
 ## Solution
 
+This solution involves creating permutations based on Recursion & then pruning the tree to reduce the iterations
 
-
-##Dependencies 
+##Dependencies
 
 
 ## Output
