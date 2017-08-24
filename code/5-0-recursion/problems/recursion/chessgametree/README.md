@@ -13,7 +13,7 @@ Game tree implementation using MiniMax
 
             
 
-##Dependencies             
+## Dependencies             
 
 
 ## Output #1           
@@ -42,4 +42,4 @@ Q C 1
 YES                        
         
 
-##References
+## References
