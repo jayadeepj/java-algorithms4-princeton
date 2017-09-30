@@ -6,9 +6,25 @@ package recursion.simple;
 public class ReverseString {
 
 	public static void main(String[] args) {
+		System.out.println(reverse("AbcDeF"));
 		System.out.println(reverseStringRecursive("AbcDeF"));
 		System.out.println(reverseStringNonRecursive("AbcDeF"));
 		System.out.println(anotherReverseStringRecursive("AbcDeF", "AbcDeF".length() - 1, ""));
+	}
+
+
+	/**
+	 * reverse(“abc”)   “c”+ reverse(“ab”)
+	 * @param text
+	 * @return
+	 */
+	private static String reverse(String text) {
+		if (text == null||text.length()==0) {
+			System.out.println(text);
+			return text;
+		}
+		int len = text.length();
+		return String.valueOf(text.charAt(len - 1)).concat(reverse(text.substring(0, len - 1)));
 	}
 
 	/**
