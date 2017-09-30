@@ -8,8 +8,10 @@ public class InsertionSort{
 			for (int j = i; j >0; j--) {
 				if(isLessThan(items[j],items[j-1]))
 					swap(items, j, j-1);
+				else
+	      	break; // break is necessary to get Best Case Complexity as N
 			}
-			
+
 		}
 	}
 
