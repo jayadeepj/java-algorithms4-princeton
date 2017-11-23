@@ -1,15 +1,15 @@
-package strings.substringsearch;
+package substringsearch;
 
 import java.util.Arrays;
 
 /**
  * Reads in two strings, the pattern and the input text, and searches for the
  * pattern in the input text using the of the Rabin-Karp algorithm.
- * 
+ *
  * For text of length n and p patterns of combined length m, its average and
  * best case running time is O(n+m) in space O(p), but its worst-case time is
  * O(nm)
- * 
+ *
  * @author jayadeep
  *
  */
@@ -46,11 +46,11 @@ public class RobinKarpSubstringSearch {
 
 	/**
 	 * Example : String = abcd
-	 * 
+	 *
 	 * oldhash(abc) => (a X 1) + (b X 3^1) + (c X 3^2)
-	 * 
+	 *
 	 * newhash(bcd) = (oldhash - a) / 3 + (d X 3^2)
-	 * 
+	 *
 	 * @param text
 	 * @param pos
 	 * @param prime
@@ -69,7 +69,7 @@ public class RobinKarpSubstringSearch {
 
 	/**
 	 * Example : hash(abc) => (a X 1) + (b X 3^1) + (c X 3^2)
-	 * 
+	 *
 	 * @param value
 	 * @param prime
 	 * @return
@@ -84,7 +84,7 @@ public class RobinKarpSubstringSearch {
 
 	/**
 	 * To resolve hash collision, recheck the strings for equality
-	 * 
+	 *
 	 * @param value1
 	 * @param value2
 	 * @return

@@ -1,4 +1,4 @@
-package strings.substringsearch;
+package substringsearch;
 
 /**
  * Simple brute force substring search
