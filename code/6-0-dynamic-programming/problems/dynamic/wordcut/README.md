@@ -20,7 +20,7 @@
 The above problem exhibits overlapping sub-problems. Use a boolean 1 D array as Dynamic Programming Store  
 
 [0 L E E T C O D E]        
-[T F F F T F F F F]
+[T F F F T F F F T]
 
 ##Dependencies
 
