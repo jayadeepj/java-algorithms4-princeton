@@ -1,4 +1,4 @@
-package dynamic.wordcut;
+package wordcut;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ import java.util.Map;
  * non-empty words, determine if s can be segmented into a space-separated
  * sequence of one or more dictionary words. You may assume the dictionary does
  * not contain duplicate words.
- * 
+ *
  * Uses a single boolean array for DP
  *
  */
@@ -30,7 +30,7 @@ public class WordCut {
 	/**
 	 * The above problem exhibits overlapping sub-problems. Use a boolean 1 D
 	 * array as Dynamic Programming Store
-	 * 
+	 *
 	 * @param text
 	 * @param lookup
 	 * @return
@@ -56,7 +56,7 @@ public class WordCut {
 
 	/**
 	 * Print 1D array
-	 * 
+	 *
 	 * @param array
 	 */
 	public static void print1DArray(boolean[] array, String suffix) {
