@@ -14,9 +14,9 @@
  3. Ignore left parentheses.
  4. On encountering a right parenthesis, pop an operator, pop the requisite number of operands, and push onto the operand stack the result of applying that operator to those operands.
 
-##Dependencies 
+## Dependencies 
 
 
 ## Output
 
-##References
+## References
